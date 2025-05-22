@@ -1,15 +1,12 @@
 [project]
-name = "mcp"
+name = "modular-mcp"
 dynamic = ["version"]
-description = "Model Context Protocol SDK"
+description = "A modular fork of the Model Context Protocol SDK with improved design"
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [{ name = "Anthropic, PBC." }]
-maintainers = [
-    { name = "David Soria Parra", email = "davidsp@anthropic.com" },
-    { name = "Justin Spahr-Summers", email = "justin@anthropic.com" },
-]
-keywords = ["git", "mcp", "llm", "automation"]
+authors = [{ name = "Damyan Dimitrov", email = "inspirationalcode@gmail.com" }]
+maintainers = [{ name = "Damyan Dimitrov", email = "inspirationalcode@gmail.com" }]
+keywords = ["git", "mcp", "llm", "automation", "modular"]
 license = { text = "MIT" }
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -39,7 +36,7 @@ cli = ["typer>=0.12.4", "python-dotenv>=1.0.0"]
 ws = ["websockets>=15.0.1"]
 
 [project.scripts]
-mcp = "mcp.cli:app [cli]"
+modular-mcp = "mcp.cli:app [cli]"
 
 [tool.uv]
 resolution = "lowest-direct"
@@ -63,7 +60,6 @@ docs = [
     "mkdocstrings-python>=1.12.2",
 ]
 
-
 [build-system]
 requires = ["hatchling", "uv-dynamic-versioning"]
 build-backend = "hatchling.build"
@@ -77,9 +73,9 @@ style = "pep440"
 bump = true
 
 [project.urls]
-Homepage = "https://modelcontextprotocol.io"
-Repository = "https://github.com/modelcontextprotocol/python-sdk"
-Issues = "https://github.com/modelcontextprotocol/python-sdk/issues"
+Homepage = "https://github.com/DamyanBG/python-sdk"
+Repository = "https://github.com/DamyanBG/python-sdk"
+Issues = "https://github.com/DamyanBG/python-sdk/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/mcp"]
